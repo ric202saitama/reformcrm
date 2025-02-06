@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
+
+body {
+  font-family: 'Kosugi Maru' !important;
+  margin: 0;
+  padding: 0;  
+}
+
+
+.card {
+  padding: 2em;
+}
+
+.loginmenubackground{
+  background-image: url('/backgroundpctablet.jpg');
+  background-size: cover;
+  background-position: center center;
+  height: 100vh; 
+  width: 100vw; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  overflow: hidden;
+}
+
+.loginmenuformcontainer{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;    
+  padding-top: 30px; 
+}
+
+.loginmenucenterform {
+  background-color: #fff; 
+  padding: 20px;
+  border-radius: 5px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  min-width: 380px;  
+}
+.loginerror{
+  color:red;
+}
+
+.newusertopheader {
+  width: 100%; /* Use 100% width instead of 100vh */
+  background-color: #fff;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+}
+.newuseraisatsu{
+  padding-top: 30px;
+}
+
+/* Ensure the modal is responsive on small screens */
+@media (max-width: 576px) {
+  .modal-dialog-responsive {
+    margin: 0.5rem; /* Add some margin for better spacing */
+    max-width: 95%; /* Ensure the modal doesn't overflow */
+  }
+
+  .modal-content {
+    border-radius: 0; /* Remove rounded corners for full-width modals */
+  }
+
+  .modal-body {
+    padding: 1rem; /* Reduce padding for better use of space */
+  }
+
+  .modal-footer {
+    flex-direction: column; /* Stack buttons vertically on small screens */
+  }
+
+  .modal-footer .btn {
+    width: 100%; /* Full-width buttons */
+    margin-bottom: 0.5rem; /* Add spacing between stacked buttons */
+  }
+}
+
+/* Prevent layout shift when modal opens */
+body.modal-open {
+  padding-right: 17px !important; /* Reserve space for the scrollbar */
+  overflow: hidden !important;
+}
