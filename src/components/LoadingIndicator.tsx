@@ -6,7 +6,7 @@ function LoadingIndicator() {
 
   return (
     <div className={`loading-indicator ${isLoading ? 'show' : ''}`}>
-      <img src="loadblue.gif" alt="Loading" width="300" height="200" />
+      <img src="../loadblue.gif" alt="Loading" width="300" height="200" />
     </div>
   );
 }

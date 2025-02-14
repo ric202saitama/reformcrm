@@ -25,7 +25,7 @@ function usePreventScrollShift(isModalOpen: boolean) {
   }, [isModalOpen]);
 }
 
-function CustomModal({ errors, title, show, onClose }: CustomModalProps) {
+const CustomModal = ({ errors, title, show, onClose }: CustomModalProps) => {
   usePreventScrollShift(show);
   return (
     <Modal
