@@ -78,7 +78,7 @@ const UserSetting = () => {
                     token: logintoken.token
                     ,searchkey: searchkey                    
                     ,isactive: isactivestatus 
-                    ,page : page
+                    ,page : page 
                     ,pageSize: pageSize                    
                 };
                 const valurl = `${apihost}userlogin/getUserComp`;
@@ -154,7 +154,8 @@ const UserSetting = () => {
     }, []);
     
     return (
-        <>                        
+        <>         
+            <div className="pt-5"></div>               
             <Box sx={{ p: 2 }}>
                 <Box display="flex" flexWrap="wrap" gap={2} mb={2}>
                     <TextField 
@@ -177,10 +178,10 @@ const UserSetting = () => {
                     <DataGrid
                         rows={rows}
                         columns={columns}
-                        getRowId={(row) => row.user_id}
+                        getRowId={(row) => row.user_id}                        
+                        rowCount={rowCount} // This provides the total count for pagination                        
                         paginationModel={{ page, pageSize }}
-                        rowCount={rowCount} // This provides the total count for pagination
-                        paginationMode="server" // Set pagination mode to 'server'
+                        paginationMode="server" // Enable server-side pagination                                                
                         onPaginationModelChange={(model) => {
                             setPage(model.page);
                             setPageSize(model.pageSize);

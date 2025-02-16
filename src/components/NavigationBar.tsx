@@ -41,7 +41,7 @@ const NagivationBar = () => {
                                 <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     <li><a className="dropdown-item" href="/usermanage"><span className="bi bi-person"></span> ユーザー管理</a></li>
                                     <li><hr className="dropdown-divider" /></li> 
-                                    <li><a className="dropdown-item" href="#"><span className="bi bi-shop"></span> 店舗管理</a></li>
+                                    <li><a className="dropdown-item" href="/branchmaster"><span className="bi bi-shop"></span> 店舗管理</a></li>
                                 </ul>
                             </li>
                             <li className="nav-item">

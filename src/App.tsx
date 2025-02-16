@@ -12,7 +12,8 @@ import { apihost } from "./api/ServerLink";
 import { AuthContext } from "./components/AuthContext";
 import UserSetting from "./components/UserSetting";
 import UserData from "./components/UserData";
-
+import BranchMaster from "./components/BranchMaster";
+import BranchDetail from "./components/BranchDetail";
 interface LoginResponse {
   token: string;
   user_name: string;  
@@ -88,6 +89,8 @@ function App() {
               <Route path="/usermanage" element={<UserSetting />} />
               <Route path="/passwordchange" element={<PasswordChange />} />              
               <Route path="/userdata" element={<UserData />} />              
+              <Route path="/branchmaster" element={<BranchMaster />} />              
+              <Route path="/BranchDetail" element={<BranchDetail />} />              
             </>
           ) : (
             // Redirect to login page if not logged in

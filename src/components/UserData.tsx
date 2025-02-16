@@ -38,7 +38,7 @@ const UserData = () =>{
         });                        
     };
     
-    const handleSaveUser =() =>{
+    const handleSaveUser = async() =>{
         const errmsg = [];
 
         if (user_name === ""){
@@ -92,7 +92,7 @@ const UserData = () =>{
                     isactive: isactive ? 1 : 0
                 };
                 const valurl = `${apihost}userlogin/saveUser`;
-                axios.post<ApiResponse>(valurl, payload)
+                await axios.post<ApiResponse>(valurl, payload)
                 .then((response) => {      
                     setIsLoading(false);              
                     const result = response.data;
@@ -189,9 +189,22 @@ const UserData = () =>{
     }, []);
 
     return(
-        <>
+        <>        
         {isLoading && <LoadingIndicator />}   
-        <div className="container">
+        <div className="container-fluid">
+            <div className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+                <div className="col-md-6">
+                    <span className="btn btn-light" style={{width: "100px"}} onClick={handleNavigateback}> 戻る </span>
+                </div>                    
+                <div className="col-md-6">                    
+                    <div className="float-end">
+                        <span className="btn btn-primary" style={{width: "100px"}} onClick={handleSaveUser}> 保存 </span>
+                    </div>                    
+                </div>                
+            </div>            
+        </div>
+
+        <div className="container-fluid">
             <div className="row">
                 <div className="col-md-6 mb-3">
                     <label className="form-label">お名前</label>
@@ -273,16 +286,8 @@ const UserData = () =>{
                     />
                     &nbsp;
                     <label className="form-label" htmlFor="isactive"> 稼働メンバー</label>
-                </div>
-                <div className="clearfix"></div>                
-                <div className="col-md-6">
-                    <span className="btn btn-light" style={{width: "100px"}} onClick={handleNavigateback}> 戻る </span>
-                </div>                    
-                <div className="col-md-6">                    
-                    <div className="float-end">
-                        <span className="btn btn-primary" style={{width: "100px"}} onClick={handleSaveUser}> 保存 </span>
-                    </div>                    
-                </div>
+                </div>                
+                
             </div>
         </div>
         </>
