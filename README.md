@@ -1,1 +1,1 @@
-A renovation(リフォーム) system frontend. System aims to provide renovation sytem to smaill companies, with AI functions that would help renovation company make this job smoother and faster.
+A renovation(リフォーム) system frontend. System aims to provide renovation sytem to small companies, with AI functions that would help renovation company make this job smoother and faster.
