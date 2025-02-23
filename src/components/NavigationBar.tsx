@@ -1,4 +1,3 @@
-
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../components/AuthContext";
 import { useNavigate } from "react-router-dom";
@@ -42,10 +41,12 @@ const NagivationBar = () => {
                                     <li><a className="dropdown-item" href="/usermanage"><span className="bi bi-person"></span> ユーザー管理</a></li>
                                     <li><hr className="dropdown-divider" /></li> 
                                     <li><a className="dropdown-item" href="/branchmaster"><span className="bi bi-shop"></span> 店舗管理</a></li>
+                                    <li><hr className="dropdown-divider" /></li> 
+                                    <li><a className="dropdown-item" href="#"><span className="bi bi-buildings"></span> 取引先マスター</a></li>
                                 </ul>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#"><span className="bi bi-houses"></span> 顧客管理</a>
+                                <a className="nav-link" href="/customermaster"><span className="bi bi-houses"></span> 顧客管理</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="#"><span className="bi bi-speedometer2"></span> 商談管理</a>

@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import axios from "axios";
@@ -211,11 +211,11 @@ const BranchDetail = () => {
         <div className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
             <div className="container-fluid">
               <div className="col-6">
-                <span className="btn btn-light" style={{width: "100px"}} onClick={handleNavigateback}> 戻る </span>
+                <span className="btn btn-light border" style={{width: "100px"}} onClick={handleNavigateback}> 戻る </span>
               </div>
               <div className="col-6">
                 <div className="float-end">
-                  <span className="btn btn-primary" style={{width: "100px"}} onClick={handleSaveBranch}> 保存 </span>
+                  <span className="btn btn-success" style={{width: "100px"}} onClick={handleSaveBranch}> 保存 </span>
                 </div>
               </div>
             </div>

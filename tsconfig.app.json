@@ -22,5 +22,10 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
+  /* Add these for custom types and module resolution */
+  "baseUrl": "src",
+  "paths": {
+    "*": ["*", "types/*"] // Replaces "types" for broader module resolution
+  },  
   "include": ["src"]
 }

@@ -194,11 +194,11 @@ const UserData = () =>{
         <div className="container-fluid">
             <div className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
                 <div className="col-md-6">
-                    <span className="btn btn-light" style={{width: "100px"}} onClick={handleNavigateback}> 戻る </span>
+                    <span className="btn btn-light border" style={{width: "100px"}} onClick={handleNavigateback}> 戻る </span>
                 </div>                    
                 <div className="col-md-6">                    
                     <div className="float-end">
-                        <span className="btn btn-primary" style={{width: "100px"}} onClick={handleSaveUser}> 保存 </span>
+                        <span className="btn btn-success" style={{width: "100px"}} onClick={handleSaveUser}> 保存 </span>
                     </div>                    
                 </div>                
             </div>            

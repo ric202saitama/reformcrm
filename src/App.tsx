@@ -14,6 +14,8 @@ import UserSetting from "./components/UserSetting";
 import UserData from "./components/UserData";
 import BranchMaster from "./components/BranchMaster";
 import BranchDetail from "./components/BranchDetail";
+import CustomerMater from "./components/CustomerMaster";
+import CustomerMasterInput from "./components/CustomermasterInput";
 interface LoginResponse {
   token: string;
   user_name: string;  
@@ -91,6 +93,8 @@ function App() {
               <Route path="/userdata" element={<UserData />} />              
               <Route path="/branchmaster" element={<BranchMaster />} />              
               <Route path="/BranchDetail" element={<BranchDetail />} />              
+              <Route path="/customermaster" element={<CustomerMater />} />              
+              <Route path="/customermasterinput" element={<CustomerMasterInput />} />              
             </>
           ) : (
             // Redirect to login page if not logged in
